@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Compra</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function() {
+            let datosCompra = sessionStorage.getItem("datosCompra");
+            
+            if (!datosCompra) {
+                document.getElementById("mensaje").innerText = "No hay datos de compra disponibles.";
+                return;
+            }
+
+            datosCompra = JSON.parse(datosCompra);
+
+            document.getElementById("nombre").innerText = datosCompra.nombre;
+            document.getElementById("fecha").innerText = datosCompra.fecha;
+            document.getElementById("lugar").innerText = datosCompra.lugar;
+            document.getElementById("cantidad").innerText = datosCompra.cantidad;
+            document.getElementById("categoria").innerText = datosCompra.categoria;
+            document.getElementById("metodoPago").innerText = datosCompra.metodoPago;
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Confirmación de Compra</h1>
+        <p id="mensaje"></p>
+        <table>
+            <tr><th>Nombre</th><td id="nombre"></td></tr>
+            <tr><th>Fecha</th><td id="fecha"></td></tr>
+            <tr><th>Lugar</th><td id="lugar"></td></tr>
+            <tr><th>Cantidad</th><td id="cantidad"></td></tr>
+            <tr><th>Categoría</th><td id="categoria"></td></tr>
+            <tr><th>Método de Pago</th><td id="metodoPago"></td></tr>
+        </table>
+        <button onclick="window.location.href='index.html'">Volver</button>
+    </div>
+</body>
+</html>
