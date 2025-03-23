@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de Entradas - Maluma</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Maluma</h1>
+        <img src="C:\Users\galas\OneDrive\Escritorio\entradas maluma\malumatiket.jpg" alt="Imagen de Maluma">
+        
+        <section class="descripcion">
+            <h2>Maluma - + PRETTY + DIRTY Europe Tour</h2>
+            <p>Juan Luis Londoño Arias, conocido artísticamente como Maluma, es un cantante y compositor colombiano.
+			<br>Saltó a la fama en su país natal en 2011, gracias a los sencillos «Farandulera»,
+			«Obsesión», y «La temperatura»; y con «Carnaval», <br>en el resto de América Latina.<br> 
+			Su álbum debut Magia tuvo éxito comercial en Colombia,<br>
+			y un año después fue nominado al Grammy Latino como mejor artista nuevo.".</p>
+        </section>
+        
+        <section class="fechas">
+            <h2>Fechas de Conciertos</h2>
+            <table>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Lugar</th>
+                    <th>Hora</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td>2025-07-15</td>
+                    <td>Madrid</td>
+                    <td>20:00</td>
+                    <td>50€</td>
+                </tr>
+                <tr>
+                    <td>2025-07-18</td>
+                    <td>Barcelona</td>
+                    <td>21:00</td>
+                    <td>55€</td>
+                </tr>
+                <tr>
+                    <td>2025-07-22</td>
+                    <td>Sevilla</td>
+                    <td>19:30</td>
+                    <td>45€</td>
+                </tr>
+            </table>
+        </section>
+        
+        <section class="compra">
+            <h2>Compra tus Entradas</h2>
+            <form id="formulario">
+                <fieldset>
+                    <legend>Datos Personales</legend>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Detalles del Concierto</legend>
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" required>
+                    
+                    <label for="lugar">Lugar:</label>
+                    <select id="lugar">
+                        <option>Madrid</option>
+                        <option>Barcelona</option>
+                        <option>Sevilla</option>
+                    </select>
+                    
+                    <label for="cantidad">Cantidad de entradas:</label>
+                    <input type="number" id="cantidad" min="1" max="10" value="1" required>
+                    
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria">
+                        <option>General</option>
+                        <option>VIP</option>
+                    </select>
+                </fieldset>
+				
+				<fieldset>
+    <legend>Método de Pago</legend>
+    <div class="metodos-pago">
+        <label>
+            <input type="radio" name="pago" value="Tarjeta" required>
+            <img src="C:\Users\galas\OneDrive\Escritorio\entradas maluma\visamaster.png"  alt="Visa"> Tarjeta
+        </label>
+        <label>
+            <input type="radio" name="pago" value="PayPal">
+            <img src="C:\Users\galas\OneDrive\Escritorio\entradas maluma\paypal.jpg" alt="PayPal"> PayPal
+        </label>
+        <label>
+            <input type="radio" name="pago" value="Transferencia">
+            <img src="C:\Users\galas\OneDrive\Escritorio\entradas maluma\bank.jpg" alt="Transferencia"> Transferencia
+					
+           
+        </label>
+    </div>
+</fieldset>
+
+                
+               
+                
+                <label>
+                    <input type="checkbox" id="terminos" required>
+                    Acepto los términos y condiciones
+                </label>
+                
+                <button type="submit" id="confirmar">Confirmar Compra</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
